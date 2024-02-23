@@ -1,5 +1,6 @@
 let addTaskbtnDiv = document.getElementById("add-task-btn-div")
 let toDo = document.getElementById("to-do")
+let taskNumber = 1;
 
 let addTaskbtn = document.createElement("button")
 addTaskbtn.className = "add-task-btn"
@@ -12,7 +13,7 @@ function addTask(eventDetails){
     // add new task to to-do coulmn
     let task = document.createElement("div")
     task.className = "task"
-    task.innerHTML = "Your task"
+    task.innerHTML = `Task ${taskNumber++}`
     task.setAttribute("contenteditable", "true")
     toDo.prepend(task)
     task.focus()
